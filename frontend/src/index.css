@@ -1,0 +1,146 @@
+:root {
+  --primary: #2f5fd7;
+  --primary-dark: #1e3fa0;
+  --bg: #f4f6fb;
+  --card: #ffffff;
+  --text: #1f2430;
+  --muted: #6b7280;
+  --border: #e3e6ee;
+  --success: #1f9d55;
+  --warning: #d97706;
+  --danger: #dc2626;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 16px 60px;
+}
+
+.navbar {
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+  padding: 14px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar h2 { margin: 0; font-size: 18px; color: var(--primary-dark); }
+.navbar .user-info { display: flex; align-items: center; gap: 14px; font-size: 14px; }
+
+.btn {
+  border: none;
+  border-radius: 6px;
+  padding: 9px 18px;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.btn-primary { background: var(--primary); color: #fff; }
+.btn-primary:hover { background: var(--primary-dark); }
+.btn-outline { background: transparent; border: 1px solid var(--border); color: var(--text); }
+.btn-success { background: var(--success); color: #fff; }
+.btn-danger { background: var(--danger); color: #fff; }
+.btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.auth-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #2f5fd7, #6a3bd6);
+}
+
+.auth-card {
+  background: var(--card);
+  padding: 36px;
+  border-radius: 12px;
+  width: 380px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+.auth-card h1 { font-size: 20px; margin-bottom: 4px; color: var(--primary-dark); }
+.auth-card p.sub { color: var(--muted); font-size: 13px; margin-top: 0; margin-bottom: 20px; }
+
+.field { margin-bottom: 14px; }
+.field label { display: block; font-size: 13px; margin-bottom: 5px; color: var(--muted); }
+.field input, .field select, .field textarea {
+  width: 100%;
+  padding: 9px 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.error-box {
+  background: #fdecea;
+  color: var(--danger);
+  padding: 10px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  margin-bottom: 14px;
+}
+
+.grid { display: grid; gap: 16px; }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-4 { grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 800px) {
+  .grid-3, .grid-4 { grid-template-columns: 1fr 1fr; }
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 18px;
+}
+
+.stat-card .label { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
+.stat-card .value { font-size: 26px; font-weight: 700; margin-top: 6px; color: var(--primary-dark); }
+
+.section-title { font-size: 16px; font-weight: 700; margin: 28px 0 12px; }
+
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+th, td { padding: 10px 12px; text-align: left; border-bottom: 1px solid var(--border); }
+th { color: var(--muted); font-weight: 600; text-transform: uppercase; font-size: 11px; }
+
+.badge {
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  display: inline-block;
+}
+.badge-present { background: #e6f7ec; color: var(--success); }
+.badge-late, .badge-halfday { background: #fef3e0; color: var(--warning); }
+.badge-absent { background: #fdecea; color: var(--danger); }
+.badge-leave { background: #eef1fd; color: var(--primary); }
+.badge-pending { background: #fef3e0; color: var(--warning); }
+.badge-approved { background: #e6f7ec; color: var(--success); }
+.badge-rejected { background: #fdecea; color: var(--danger); }
+
+.tabs { display: flex; gap: 8px; margin-bottom: 18px; }
+.tab {
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--muted);
+  background: var(--card);
+  border: 1px solid var(--border);
+}
+.tab.active { background: var(--primary); color: #fff; border-color: var(--primary); }
+
+.row-between { display: flex; justify-content: space-between; align-items: center; }
+.muted { color: var(--muted); font-size: 13px; }
+.mt-16 { margin-top: 16px; }
