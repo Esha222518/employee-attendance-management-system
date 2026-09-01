@@ -59,9 +59,9 @@ npm run dev                 # starts API on http://localhost:5000
 Demo accounts created by `npm run seed`:
 | Role     | Email               | Password    |
 |----------|---------------------|-------------|
-| HR       | hr@company.com      | password123 |
-| Employee | john@company.com    | password123 |
-| Employee | priya@company.com   | password123 |
+| HR       | hr@company.com      | pHrAdmin@123 |
+| Employee | john@company.com    | JohnDev@123 |
+| Employee | priya@company.com   | PriyaUX@123 |
 
 ### 2. Frontend
 
